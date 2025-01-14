@@ -1,0 +1,148 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+  background-color: #f7f9fc;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards; /* Fade-in on load */
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.5s; /* Slight delay for staggered fade-in */
+}
+
+.subheading {
+  color: #6c63ff;
+  font-size: 1em;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.subheading:hover {
+  color: #5a52e0; /* Darker color on hover */
+}
+
+.hero h1 {
+  font-size: 2.4em;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease; /* Color and scale transition */
+}
+
+.hero h1:hover {
+  color: #222;
+  transform: scale(1.05); /* Slightly zoom on hover */
+}
+
+.description {
+  margin: 20px 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.8s; /* Staggered fade-in */
+}
+
+/* Appointment Button */
+.appointment-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
+
+.appointment-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1s; /* Staggered fade-in */
+  transition: transform 0.3s ease; /* Smooth pop-up transition */
+}
+
+.profile-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Profile Info */
+.profile-info h3 {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+}
+
+.profile-info p {
+  font-size: 0.8em;
+  color: #777;
+  margin: 2px 0;
+}
+
+/* Client Comments */
+.client-comments {
+  margin-top: 15px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  font-size: 0.9em;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.2s; /* Staggered fade-in */
+  transition: transform 0.3s ease; /* Smooth pop-up transition */
+}
+
+.client-comments:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.client-comments p {
+  margin: 5px 0;
+  font-size: 0.85em;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 200%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -80px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.5s; /* Staggered fade-in */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

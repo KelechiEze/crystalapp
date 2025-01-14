@@ -1,0 +1,199 @@
+/* Main Section Container */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem;
+  gap: 3rem; /* Space between sections */
+  margin-top: 80px;
+  opacity: 0;
+  animation: fadeSlideIn 1s ease-in-out forwards; /* Slide-in with fade */
+}
+
+/* Content Container */
+.section-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  gap: 2rem;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.5s; /* Staggered fade-up effect */
+  transform: translateY(20px); /* Slide effect */
+}
+
+/* Reverse Layout for Alternating Sections */
+.reverse {
+  flex-direction: row-reverse;
+  animation-delay: 0.7s; /* Slight delay for alternating sections */
+}
+
+/* Image Container with Hover Effect */
+.section-image-container {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden; /* Adds a clean clipping effect */
+}
+
+.section-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.section-image-container:hover .section-image {
+  transform: scale(1.08); /* More pronounced zoom */
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Background Accent for Image Container */
+.section-image-container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #e0f4ff;
+  z-index: -1;
+  border-radius: 10px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.section-image-container:hover::after {
+  transform: translate(8px, 8px); /* Enhanced shadow movement */
+}
+
+/* Text Content */
+.section-text {
+  max-width: 500px;
+  opacity: 0;
+  animation: fadeUp 1s ease-in-out forwards 0.8s; /* Fade and slide up */
+}
+
+.section-text h2 {
+  font-size: 1.8rem; /* Larger font for titles */
+  color: #333;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease, transform 0.4s ease; /* Smooth hover effect */
+}
+
+.section-text h2:hover {
+  color: #0056b3; /* Different color on hover */
+  transform: translateX(5px); /* Slight slide on hover */
+}
+
+.section-text p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeInText 1.2s ease forwards 1.2s; /* Delayed fade-in */
+}
+
+/* List Styling */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards 1.4s; /* Staggered fade-up effect */
+}
+
+.section-list li {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  position: relative;
+  animation: fadeInItem 0.8s ease forwards; /* Staggered appearance */
+}
+
+.section-list li::before {
+  content: "•";
+  color: #0056b3;
+  font-weight: bold;
+  transform: scale(0.8); /* Smaller bullet */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section-list li:hover::before {
+  transform: scale(1.2); /* Enlarge bullet on hover */
+  color: #007bff; /* Change color on hover */
+}
+
+/* Contact Button */
+.contact-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px); /* Enhanced lift on hover */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .section-content {
+      flex-direction: column;
+      text-align: center;
+      animation: fadeInMobile 1s ease forwards; /* Smooth fade-in on mobile */
+  }
+
+  .reverse {
+      flex-direction: column;
+  }
+
+  .section-image {
+      width: 80%;
+      animation: fadeSlideInMobile 0.8s ease forwards; /* Mobile slide effect */
+  }
+
+  .section-text {
+      max-width: 100%;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInItem {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInMobile {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideInMobile {
+  from { opacity: 0; transform: translateX(-15px); }
+  to { opacity: 1; transform: translateX(0); }
+}

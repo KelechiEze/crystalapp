@@ -1,0 +1,123 @@
+/* Speakers Section Container */
+.speakers-section {
+  text-align: center;
+  padding: 40px;
+  margin-top: 70px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards; /* Fade-in animation */
+}
+
+/* Section Title */
+.speakers-section h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #1e1e1e;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.speakers-section h2:hover {
+  color: #007bff; /* Color change on hover */
+}
+
+/* Section Description */
+.speakers-section .description {
+  color: #6d6d6d;
+  font-size: 0.8em;
+  margin: 10px 0 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Speakers Grid */
+.speakers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Speaker Card */
+.speaker-card {
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Shadow enhancement */
+}
+
+/* Image Container */
+.image-container {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.speaker-card:hover .image-container {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Speaker Image */
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out; /* Smooth grayscale transition */
+}
+
+.speaker-card:hover .speaker-image {
+  filter: grayscale(0%);
+}
+
+/* Speaker Name */
+.speaker-card h3 {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin: 10px 0 5px;
+}
+
+/* Speaker Role */
+.speaker-card .role {
+  font-size: 0.6em;
+  color: #6d6d6d;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 0.8em;
+  color: #6d6d6d;
+  margin: 0 8px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Color and position transition */
+}
+
+.social-icons a:hover {
+  color: #1e1e1e;
+  transform: translateY(-2px); /* Slight upward shift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .speaker-card {
+      width: 180px; /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .speakers-grid {
+      gap: 15px; /* Reduced gap for small screens */
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

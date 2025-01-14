@@ -1,0 +1,76 @@
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards; /* Fade-in on page load */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #4b7bec;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logo:hover {
+  color: #0056b3; /* Slightly darker color on hover */
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.3s; /* Staggered fade-in */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; /* Default color */
+  font-weight:  500;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and scale transition */
+}
+
+nav a:hover {
+  color: #007bff; /* Blue color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Auth buttons */
+.auth-buttons .login-btn,
+.auth-buttons .register-btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
+
+.login-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.register-btn {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  background-color: #2ecc71; /* Green shade on hover for both buttons */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

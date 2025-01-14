@@ -1,0 +1,113 @@
+.live-stream {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  
+  .category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .nav-item {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+  }
+  
+  .nav-item.active,
+  .nav-item:hover {
+    color: #fff;
+    background: #4a90e2;
+    border-color: #4a90e2;
+  }
+  
+  .stream-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .stream-item {
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .stream-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .stream-image {
+    cursor: pointer;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .stream-content {
+    padding: 15px;
+  }
+  
+  .stream-content h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .stream-content p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .modal {
+    position: fixed; /* Use fixed to center modal relative to the viewport */
+    top: 0;
+    left: 0;
+    max-width: 1800px;
+    width: 1700px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #333;
+    padding: 60px;
+    max-width: 640px;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .youtube-video {
+    width: 100%; /* Ensure video takes full modal width */
+    height: auto;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  
+  

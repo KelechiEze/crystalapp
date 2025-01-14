@@ -1,0 +1,130 @@
+/* Benefits Section Container */
+.benefits-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* Fade-in on load */
+}
+
+/* Section Title */
+.benefits-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.benefits-title:hover {
+    color: #007bff; /* Title color change on hover */
+}
+
+/* Section Description */
+.benefits-description {
+    font-size: 0.8rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Enables wrapping on smaller screens */
+}
+
+/* Individual Benefit Card */
+.benefit-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+    opacity: 0;
+    animation: slideUpFade 0.5s ease forwards; /* Slide-up animation */
+    animation-delay: calc(0.1s * var(--animation-order)); /* Staggered effect */
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefit Image */
+.benefit-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.benefit-card:hover .benefit-image {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Benefit Title */
+.benefit-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Benefit Description */
+.benefit-description {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Read More Link */
+.read-more {
+    font-size: 0.8rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0056b3;
+    transform: translateX(5px); /* Slide to the right on hover */
+}
+
+.read-more::after {
+    content: '→';
+    margin-left: 5px;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

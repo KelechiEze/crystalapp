@@ -1,0 +1,89 @@
+import React from "react";
+import "./WellbeingFooter.css";
+
+const WellbeingFooter = () => {
+  // Function to scroll back to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        {/* Left Section: Logo and Description */}
+        <div className="footer-left">
+          <div className="footer-logo">
+            <img src="/src/assets/LOGO.png" alt="Wellbeing Logo" />
+          </div>
+          <p className="footer-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div className="footer-payment-icons">
+            <img src="src/assets/mastercard.jpg" alt="Mastercard" />
+            <img src="src/assets/visa.jpg" alt="Visa" />
+            <img src="src/assets/americanexpress.png" alt="American Express" />
+            <img src="src/assets/paypal.jpg" alt="PayPal" />
+          </div>
+        </div>
+
+        {/* Middle Section: Quick Links and Support */}
+        <div className="footer-middle">
+          <div className="footer-column">
+            <h3 className="footer-heading">Quick Links</h3>
+            <ul className="footer-links">
+              <li>Home</li>
+              <li>Services</li>
+              <li>Latest News</li>
+              <li>Pricing</li>
+              <li>Tutorials</li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h3 className="footer-heading">Support</h3>
+            <ul className="footer-links">
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Team</li>
+              <li>FAQ</li>
+              <li>Testimonial</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Right Section: Contact Information */}
+        <div className="footer-right">
+          <h3 className="footer-heading">Get in Touch</h3>
+          <p>Email: info@wellbeing.com</p>
+          <p>Phone: +1 234 567 89 0 0</p>
+          <p>Fax: +1 (987) 654 321 9 9</p>
+          <div className="footer-social-icons">
+            <a href="https://www.facebook.com" aria-label="Facebook">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" aria-label="Twitter">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com" aria-label="Instagram">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Back to Top Button */}
+      <div className="footer-back-to-top">
+        <button id="backToTopButton" onClick={scrollToTop}>
+          ↑
+        </button>
+      </div>
+    </footer>
+  );
+};
+
+export default WellbeingFooter;
