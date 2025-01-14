@@ -3,7 +3,7 @@ import Header from './Header'; // Import the Header component
 import './AboutSection.css';
 import "./WellbeingFooter.css";
 import WellbeingFooter from './WellbeingFooter';
-import Livestream from './Livestream';
+import LiveStream from './LiveStream';
 import Newsletter from './Newsletter';
 
 const Tutorials = () => {
@@ -24,7 +24,7 @@ const Tutorials = () => {
           </div>
         </div>
       </section>
-      <Livestream />
+      <LiveStream />
       <Newsletter />
       <WellbeingFooter />
     </div>
