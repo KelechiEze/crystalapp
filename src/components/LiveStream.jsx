@@ -2,27 +2,34 @@ import React, { useState } from 'react';
 import YouTube from 'react-youtube'; // For embedding YouTube videos
 import './LiveStream.css';
 
+// Import images directly
+import livestream1 from '/src/assets/livestream1.png';
+import livestream2 from '/src/assets/livestream2.png';
+import livestream3 from '/src/assets/livestream3.png';
+import livestream4 from '/src/assets/livestream4.png';
+import livestream5 from '/src/assets/livestream5.png';
+
 const LiveStream = () => {
   // Define categories and their respective data
   const categories = {
     All: [
-      { id: 1, title: 'How To Growth Your Business', author: 'Frank Smith', image: '/src/assets/livestream1.png', videoId: 'dQw4w9WgXcQ' },
-      { id: 2, title: 'How To Fit Your Health', author: 'Jay Webster', image: '/src/assets/livestream2.png', videoId: '3JZ_D3ELwOQ' },
-      { id: 3, title: 'How To Gain Knowledge', author: 'Taylor Parkes', image: '/src/assets/livestream3.png', videoId: 'mPZkdNFkNps' },
-      { id: 4, title: 'Inspiring Your Life Change', author: 'Ella Sims', image: '/src/assets/livestream4.png', videoId: '5qap5aO4i9A' },
-      { id: 5, title: 'Simple Steps to Success', author: 'Rachel Goodwin', image: '/src/assets/livestream5.png', videoId: 'kJQP7kiw5Fk' },
+      { id: 1, title: 'How To Growth Your Business', author: 'Frank Smith', image: livestream1, videoId: 'dQw4w9WgXcQ' },
+      { id: 2, title: 'How To Fit Your Health', author: 'Jay Webster', image: livestream2, videoId: '3JZ_D3ELwOQ' },
+      { id: 3, title: 'How To Gain Knowledge', author: 'Taylor Parkes', image: livestream3, videoId: 'mPZkdNFkNps' },
+      { id: 4, title: 'Inspiring Your Life Change', author: 'Ella Sims', image: livestream4, videoId: '5qap5aO4i9A' },
+      { id: 5, title: 'Simple Steps to Success', author: 'Rachel Goodwin', image: livestream5, videoId: 'kJQP7kiw5Fk' },
     ],
     Business: [
-      { id: 1, title: 'How To Growth Your Business', author: 'Frank Smith', image: '/src/assets/livestream1.png', videoId: 'dQw4w9WgXcQ' },
+      { id: 1, title: 'How To Growth Your Business', author: 'Frank Smith', image: livestream1, videoId: 'dQw4w9WgXcQ' },
     ],
     'Life Coaching': [
-      { id: 1, title: 'Inspiring Your Life Change', author: 'Ella Sims', image: '/src/assets/livestream4.png', videoId: '5qap5aO4i9A' },
+      { id: 1, title: 'Inspiring Your Life Change', author: 'Ella Sims', image: livestream4, videoId: '5qap5aO4i9A' },
     ],
     Events: [
-      { id: 1, title: 'Simple Steps to Success', author: 'Rachel Goodwin', image: '/src/assets/livestream5.png', videoId: 'kJQP7kiw5Fk' },
+      { id: 1, title: 'Simple Steps to Success', author: 'Rachel Goodwin', image: livestream5, videoId: 'kJQP7kiw5Fk' },
     ],
     Health: [
-      { id: 1, title: 'How To Fit Your Health', author: 'Jay Webster', image: '/src/assets/livestream2.png', videoId: '3JZ_D3ELwOQ' },
+      { id: 1, title: 'How To Fit Your Health', author: 'Jay Webster', image: livestream2, videoId: '3JZ_D3ELwOQ' },
     ],
   };
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import './AboutNext.css';
+import mainImage from '../assets/about-care-img.png';
+import mainImages from '../assets/about-care-img2.png'
 
 const AboutNext = () => {
   return (
@@ -9,12 +11,12 @@ const AboutNext = () => {
         <div className="image-section">
           <img
             className="main-image"
-            src="/src/assets/about-care-img.png"
+            src={mainImage}
             alt="Teacher"
           />
           <img
             className="overlay-image"
-            src="/src/assets/about-care-img2.png"
+            src={mainImages}
             alt="Student"
           />
         </div>
