@@ -1,11 +1,17 @@
 import React from 'react';
 import './Speakers.css';
 
+// Import images directly
+import smile1 from '/src/assets/smile1.jpg';
+import smile2 from '/src/assets/smile2.jpg';
+import smile3 from '/src/assets/smile3.jpg';
+import smile4 from '/src/assets/smile4.jpg';
+
 const speakers = [
   {
     name: 'Taylor Parkes',
     role: 'Motivation Speaker',
-    imgSrc: '/src/assets/smile1.jpg',
+    imgSrc: smile1, // Use imported image
     social: {
       facebook: '#',
       twitter: '#',
@@ -15,7 +21,7 @@ const speakers = [
   {
     name: 'Alexandra Lowe',
     role: 'Motivation Speaker',
-    imgSrc: '/src/assets/smile2.jpg',
+    imgSrc: smile2, // Use imported image
     social: {
       facebook: '#',
       twitter: '#',
@@ -25,7 +31,7 @@ const speakers = [
   {
     name: 'Hollie Blake',
     role: 'Coach Teacher',
-    imgSrc: '/src/assets/smile3.jpg',
+    imgSrc: smile3, // Use imported image
     social: {
       facebook: '#',
       twitter: '#',
@@ -35,7 +41,7 @@ const speakers = [
   {
     name: 'Morgan Nicholson',
     role: 'Motivation Speaker',
-    imgSrc: '/src/assets/smile4.jpg',
+    imgSrc: smile4, // Use imported image
     social: {
       facebook: '#',
       twitter: '#',

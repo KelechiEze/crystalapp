@@ -6,11 +6,11 @@
   }
   
   .support-team h2 {
-    font-size: 1.87em;
+    font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 30px;
     color: #222;
-    padding: 0 600px; /* Adjusts the width of the heading */
+    padding: 0 450px; /* Adjusts the width of the heading */
   }
   
   /* Grid Styling */

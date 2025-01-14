@@ -1,6 +1,11 @@
 import React from 'react';
 import './SupportTeam.css';
 
+// Import images
+import supportIcon1 from '/src/assets/support-icon1.png';
+import supportIcon2 from '/src/assets/support-icon2.png';
+import supportIcon3 from '/src/assets/support-icon3.png';
+
 const SupportTeam = () => {
   const supportCards = [
     {
@@ -10,7 +15,7 @@ const SupportTeam = () => {
         { text: 'support@wellbeing.com', link: 'mailto:support@wellbeing.com' },
         { text: 'help@wellbeing.com', link: 'mailto:help@wellbeing.com' },
       ],
-      icon: '/src/assets/support-icon1.png', // Replace with the correct path
+      icon: supportIcon1, // Use imported image
     },
     {
       id: 2,
@@ -19,7 +24,7 @@ const SupportTeam = () => {
         { text: '121 King Street Melbourne,', link: '#' },
         { text: '3000, Australia', link: '#' },
       ],
-      icon: '/src/assets/support-icon2.png', // Replace with the correct path
+      icon: supportIcon2, // Use imported image
     },
     {
       id: 3,
@@ -28,7 +33,7 @@ const SupportTeam = () => {
         { text: '+123 45 678 901', link: 'tel:+12345678901' },
         { text: '+234 56 789 012', link: 'tel:+23456789012' },
       ],
-      icon: '/src/assets/support-icon3.png', // Replace with the correct path
+      icon: supportIcon3, // Use imported image
     },
   ];
 

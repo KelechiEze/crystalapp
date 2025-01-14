@@ -1,6 +1,13 @@
 import React from "react";
 import "./WellbeingFooter.css";
 
+// Import images
+import logo from "/src/assets/LOGO.png";
+import mastercard from "/src/assets/mastercard.jpg";
+import visa from "/src/assets/visa.jpg";
+import americanexpress from "/src/assets/americanexpress.png";
+import paypal from "/src/assets/paypal.jpg";
+
 const WellbeingFooter = () => {
   // Function to scroll back to the top of the page
   const scrollToTop = () => {
@@ -16,16 +23,16 @@ const WellbeingFooter = () => {
         {/* Left Section: Logo and Description */}
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="/src/assets/LOGO.png" alt="Wellbeing Logo" />
+            <img src={logo} alt="Wellbeing Logo" />
           </div>
           <p className="footer-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="footer-payment-icons">
-            <img src="src/assets/mastercard.jpg" alt="Mastercard" />
-            <img src="src/assets/visa.jpg" alt="Visa" />
-            <img src="src/assets/americanexpress.png" alt="American Express" />
-            <img src="src/assets/paypal.jpg" alt="PayPal" />
+            <img src={mastercard} alt="Mastercard" />
+            <img src={visa} alt="Visa" />
+            <img src={americanexpress} alt="American Express" />
+            <img src={paypal} alt="PayPal" />
           </div>
         </div>
 

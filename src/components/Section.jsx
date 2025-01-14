@@ -1,5 +1,7 @@
 import React from "react";
 import "./Section.css"; // Import the CSS file for styling
+import sectionImage from '../assets/image.png';
+import sectionImage2 from '../assets/image2.png'
 
 const Section = () => {
   return (
@@ -7,7 +9,7 @@ const Section = () => {
       <div className="section-content">
         <div className="section-image-container">
           <img
-            src="/src/assets/image.png"
+            src={sectionImage}
             alt="Business Meeting"
             className="section-image"
           />
@@ -30,7 +32,7 @@ const Section = () => {
 
       <div className="section-image-container">
           <img
-            src="/src/assets/image2.png"
+            src={sectionImage2}
             alt="Empowering Potential"
             className="section-image"
           />
