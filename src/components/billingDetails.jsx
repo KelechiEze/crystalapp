@@ -1,18 +1,9 @@
 import React from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./CategoryPage.css";
+import { Link, NavLink } from "react-router-dom";
+import "./billingDetails.css";
 import Logo from "../assets/LOGO.png";
-import { FaUserAlt, FaBriefcase } from "react-icons/fa";
 
-const CategoryPage = () => {
-  const navigate = useNavigate();
-
-  // Handle navigation to the account-details page
-  const handleCardClick = (accountType) => {
-    // Optionally, you can pass the accountType as state or log it for now
-    console.log(`Selected Account Type: ${accountType}`);
-    navigate("/accountDetails");
-  };
+const BillingDetailsPage = () => {
 
   return (
     <div className="verification-page">
@@ -70,31 +61,10 @@ const CategoryPage = () => {
 
       {/* Right Section */}
       <div className="category-right">
-        <h1>Choose account type</h1>
-        <p>Your email confirmed! Let's select your account type and go to the next step.</p>
-        <div className="account-options">
-          {/* Personal Account */}
-          <div
-            className="account-card"
-            onClick={() => handleCardClick("personal")}
-          >
-            <FaUserAlt className="account-icon" />
-            <h3>Personal</h3>
-            <button className="account-button">→</button>
-          </div>
-          {/* Business Account */}
-          <div
-            className="account-card"
-            onClick={() => handleCardClick("business")}
-          >
-            <FaBriefcase className="account-icon" />
-            <h3>Business</h3>
-            <button className="account-button">→</button>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
 };
 
-export default CategoryPage;
+export default BillingDetailsPage;

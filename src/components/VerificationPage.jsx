@@ -63,7 +63,7 @@ const VerificationPage = () => {
           </li>
           <li>
             <NavLink
-              to="/payment-details"
+              to="/paymentDetails"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               4. Payment Details
@@ -71,7 +71,7 @@ const VerificationPage = () => {
           </li>
           <li>
             <NavLink
-              to="/billing-details"
+              to="/billingDetails"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               5. Billing Details

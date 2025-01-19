@@ -1,7 +1,7 @@
 /* Account Details Page Styling */
 .account-details-page {
     display: flex;
-    height: 100vh;
+    height: 110vh;
     font-family: "Arial", sans-serif;
     color: #333;
   }
@@ -9,7 +9,7 @@
   /* Left Section (Same as verification-left) */
   .accountDetails-left {
     width: 30%;
-    background: #f9fafc;
+    background: #fff;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -32,8 +32,8 @@
   }
   
   .steps li {
-    margin-bottom: 15px;
-    font-weight: 600;
+    margin-bottom: 26px;
+    font-weight: 400;
   }
   
   .steps li a {
@@ -55,7 +55,7 @@
   }
   
   /* Account Details Right Section */
-.accountDetails-right {
+  .accountDetails-right {
     padding: 2rem 4.5rem;
     max-width: 900px;
     width: 700px;
@@ -63,7 +63,7 @@
   }
   
   .accountDetails-right h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #333;
@@ -102,7 +102,7 @@
     width: 100%;
     padding: 0.722rem 0.96rem;
     border: 1px solid #ccc;
-    border-radius:1px;
+    border-radius: 1px;
     font-size: 0.9rem;
     outline: none;
     background-color: #fff;
@@ -113,11 +113,10 @@
     border-color: #007bff;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
   }
-
+  
   .form-group input::placeholder {
     font-size: 14px;
   }
-  
   
   /* Date of Birth Dropdowns */
   .dob {
@@ -132,6 +131,7 @@
   
   .dob-input {
     flex: 1;
+    width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #ccc;
     border-radius: 1px;
@@ -172,7 +172,7 @@
   }
   
   /* Gender Options Container */
-.gender-options {
+  .gender-options {
     display: flex;
     gap: 1rem; /* Adds spacing between the boxes */
     margin-top: 1rem;
@@ -190,7 +190,7 @@
     flex-direction: column;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    width: 130px; /* Consistent size for each box */
+    width: 95px; /* Consistent size for each box */
     text-align: center;
   }
   
@@ -202,9 +202,48 @@
   
   /* Gender Checkbox */
   .gender-option-box input[type="checkbox"] {
-    margin-bottom: 0.5rem; /* Adds spacing between checkbox and label */
-    transform: scale(1.2); /* Slightly larger checkboxes for better visibility */
+    margin-bottom: 0.5rem;
+    transform: scale(0.5); /* Smaller size */
     cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px; /* Smaller width */
+    height: 8px; /* Smaller height */
+    border: 2px solid #ccc;
+    border-radius: 4px; /* Optional for rounded checkboxes */
+    display: inline-block;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Custom Checkbox Checked State */
+  .gender-option-box input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .gender-option-box input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Prevent unwanted hover/focus effects */
+  .gender-option-box input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Add focus-visible outline for accessibility */
+  .gender-option-box input[type="checkbox"]:focus-visible {
+    outline: 2px solid #007bff;
   }
   
   /* Gender Label */
@@ -217,8 +256,24 @@
   
   /* Selected State */
   .gender-option-box input[type="checkbox"]:checked + label {
-    font-weight: bold;
+    font-weight: 400;
     color: #007bff;
   }
   
+  /* Submit Button */
+  .next-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .next-button:hover {
+    background-color: #0056b3;
+  }
   

@@ -1,13 +1,21 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./accountDetails.css";
 import Logo from "../assets/LOGO.png";
 
 const AccountDetailsPage = () => {
-  const [passwordVisible, setPasswordVisible] = useState(false); // useState is now correctly imported
+  const [passwordVisible, setPasswordVisible] = useState(false); // Manage password visibility
+  const [dob, setDob] = useState(null); // Manage Date of Birth state
+  const [gender, setGender] = useState(""); // Manage Gender selection state
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  };
+
+  const handleGenderSelection = (selectedGender) => {
+    setGender(selectedGender); // Update gender state with the selected value
   };
 
   return (
@@ -44,7 +52,7 @@ const AccountDetailsPage = () => {
           </li>
           <li>
             <NavLink
-              to="/payment-details"
+              to="/paymentDetails"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               4. Payment Details
@@ -52,7 +60,7 @@ const AccountDetailsPage = () => {
           </li>
           <li>
             <NavLink
-              to="/billing-details"
+              to="/billingDetails"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               5. Billing Details
@@ -102,28 +110,18 @@ const AccountDetailsPage = () => {
               className="form-input"
             />
           </div>
-          <div className="form-group dob">
+          <div className="form-group">
             <label>Date of Birth</label>
-            <div className="dob-fields">
-              <select className="dob-input">
-                <option value="" disabled selected>
-                  Date
-                </option>
-                {/* Add options for days */}
-              </select>
-              <select className="dob-input">
-                <option value="" disabled selected>
-                  Month
-                </option>
-                {/* Add options for months */}
-              </select>
-              <select className="dob-input">
-                <option value="" disabled selected>
-                  Year
-                </option>
-                {/* Add options for years */}
-              </select>
-            </div>
+            <DatePicker
+              selected={dob}
+              onChange={(date) => setDob(date)}
+              placeholderText="Click to select DOB"
+              dateFormat="dd/MM/yyyy"
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select"
+              className="dob-input"
+            />
           </div>
         </div>
 
@@ -150,30 +148,53 @@ const AccountDetailsPage = () => {
         </div>
 
         {/* Fourth Row: Gender */}
-<div className="form-row">
-  <div className="form-group">
-    <label>Gender</label>
-    <div className="gender-options">
-      {/* Male Option */}
-      <div className="gender-option-box">
-        <input type="checkbox" id="male" name="gender" value="Male" />
-        <label htmlFor="male">Male</label>
-      </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label>Gender</label>
+            <div className="gender-options">
+              {/* Male Option */}
+              <div
+                className={`gender-option-box ${
+                  gender === "Male" ? "selected" : ""
+                }`}
+                onClick={() => handleGenderSelection("Male")}
+              >
+                <input
+                  type="checkbox"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  checked={gender === "Male"}
+                  readOnly
+                />
+                <label htmlFor="male">Male</label>
+              </div>
 
-      {/* Female Option */}
-      <div className="gender-option-box">
-        <input type="checkbox" id="female" name="gender" value="Female" />
-        <label htmlFor="female">Female</label>
-      </div>
-    </div>
-  </div>
-</div>
-
+              {/* Female Option */}
+              <div
+                className={`gender-option-box ${
+                  gender === "Female" ? "selected" : ""
+                }`}
+                onClick={() => handleGenderSelection("Female")}
+              >
+                <input
+                  type="checkbox"
+                  id="female"
+                  name="gender"
+                  value="Female"
+                  checked={gender === "Female"}
+                  readOnly
+                />
+                <label htmlFor="female">Female</label>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Submit Button */}
         <button type="submit" className="next-button">
-            Next step →
-          </button>
+          Next step →
+        </button>
       </div>
     </div>
   );
