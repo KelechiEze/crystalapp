@@ -1,0 +1,157 @@
+/* RegisterPage.css */
+
+.register-page {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Left Section */
+  .register-left {
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url('../assets/hit.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .register-logo {
+    width: 120px;
+  }
+  
+  .register-left-content {
+    text-align: left;
+    padding: 50px;
+  }
+  
+  .quote {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 23px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .quote.fade-in {
+    opacity: 1;
+  }
+  
+  .quote.fade-out {
+    opacity: 0;
+  }
+  
+  
+  .author {
+    font-weight: bold;
+  }
+  
+  .designation {
+    font-size: 14px;
+    color: #cccccc;
+  }
+  
+  .footer-logos img {
+    width: 40px;
+    margin-right: 20px;
+  }
+  
+  /* Right Section */
+  .register-right {
+    flex: 1;
+    background-color: #f9faff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-form {
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .register-form h1 {
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  .register-form p {
+    color: #7f8c8d;
+    font-weight: light;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 6px;
+  }
+  
+  .register-form label {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight:700;
+    color: #34495e;
+  }
+
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .start-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .spinner {
+    border: 3px solid #f3f3f3; /* Light gray */
+    border-top: 3px solid #007bff; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -28,7 +28,10 @@ const Header = () => {
       </nav>
       <div className="auth-buttons">
         <button className="login-btn">Login</button>
-        <button className="register-btn">Register</button>
+        <NavLink to="/register" className="register-btn">
+  Register
+</NavLink>
+
       </div>
     </header>
   );

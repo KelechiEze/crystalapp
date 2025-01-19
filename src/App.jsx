@@ -18,6 +18,10 @@ import AboutSection from './components/AboutSection';
 import Tutorials from './components/Tutorials';
 import Pricing from './components/Pricing';
 import ContactPage from './components/ContactPage';
+import RegisterPage from './components/RegisterPage';
+import VerificationPage from "./components/VerificationPage";
+import CategoryPage from "./components/CategoryPage";
+import AccountDetailsPage from "./components/accountDetailsPage";
 
 const HomePage = () => (
   <div>
@@ -44,6 +48,10 @@ function App() {
         <Route path="/Tutorials" element={<Tutorials />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/Contact" element={<ContactPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/verification" element={<VerificationPage />} />
+        <Route path="/category" element={<CategoryPage />} />
+        <Route path="/accountDetails" element={<AccountDetailsPage />} />
       </Routes>
     </Router>
   );
