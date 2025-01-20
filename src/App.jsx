@@ -57,7 +57,7 @@ function App() {
         <Route path="/accountDetails" element={<AccountDetailsPage />} />
         <Route path="/paymentDetails" element={<PaymentDetails />} />
         <Route path="/billingDetails" element={<BillingDetailsPage />} />
-        <Route path="login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

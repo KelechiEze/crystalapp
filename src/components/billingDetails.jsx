@@ -168,7 +168,7 @@ const BillingDetailsPage = () => {
         className="modal-button"
         onClick={() => {
           setIsModalVisible(false);
-          navigate("/");
+          navigate("/login");
         }}
       >
         LOGIN NOW
