@@ -24,6 +24,7 @@ import CategoryPage from "./components/CategoryPage";
 import AccountDetailsPage from "./components/accountDetailsPage";
 import PaymentDetails from "./components/paymentDetails";
 import BillingDetailsPage  from "./components/billingDetails";
+import LoginPage from "./components/LoginPage";
 
 const HomePage = () => (
   <div>
@@ -56,6 +57,7 @@ function App() {
         <Route path="/accountDetails" element={<AccountDetailsPage />} />
         <Route path="/paymentDetails" element={<PaymentDetails />} />
         <Route path="/billingDetails" element={<BillingDetailsPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

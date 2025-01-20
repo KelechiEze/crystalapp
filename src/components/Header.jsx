@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src={HeaderImage} alt="Logo"  />
+        <img src={HeaderImage} alt="Logo" />
       </div>
       <nav>
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -27,11 +27,12 @@ const Header = () => {
         </NavLink>
       </nav>
       <div className="auth-buttons">
-        <button className="login-btn">Login</button>
+        <NavLink to="/login" className="login-btn">
+          Login
+        </NavLink>
         <NavLink to="/register" className="register-btn">
-  Register
-</NavLink>
-
+          Register
+        </NavLink>
       </div>
     </header>
   );

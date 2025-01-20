@@ -1,5 +1,7 @@
 import React from "react";
 import "./WellbeingFooter.css";
+import { NavLink } from "react-router-dom";
+
 
 // Import images
 import logo from "/src/assets/LOGO.png";
@@ -38,27 +40,58 @@ const WellbeingFooter = () => {
 
         {/* Middle Section: Quick Links and Support */}
         <div className="footer-middle">
-          <div className="footer-column">
-            <h3 className="footer-heading">Quick Links</h3>
-            <ul className="footer-links">
-              <li>Home</li>
-              <li>Services</li>
-              <li>Latest News</li>
-              <li>Pricing</li>
-              <li>Tutorials</li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h3 className="footer-heading">Support</h3>
-            <ul className="footer-links">
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Team</li>
-              <li>FAQ</li>
-              <li>Testimonial</li>
-            </ul>
-          </div>
-        </div>
+  <div className="footer-column">
+    <h3 className="footer-heading">Quick Links</h3>
+    <ul className="footer-links">
+      <li>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+           Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/services">Services</NavLink>
+      </li>
+      <li>
+        <NavLink to="/news">Latest News</NavLink>
+      </li>
+      <li>
+        <NavLink to="/Pricing" className={({ isActive }) => (isActive ? 'active' : '')}>
+          Pricing
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/Tutorials" className={({ isActive }) => (isActive ? 'active' : '')}>
+           Tutorials
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+  <div className="footer-column">
+    <h3 className="footer-heading">Support</h3>
+    <ul className="footer-links">
+      <li>
+        <NavLink to="/About" className={({ isActive }) => (isActive ? 'active' : '')}>
+           About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/Contact" className={({ isActive }) => (isActive ? 'active' : '')}>
+           Contact Us
+         </NavLink>
+      </li>
+      <li>
+        <NavLink to="/team">Team</NavLink>
+      </li>
+      <li>
+        <NavLink to="/faq">FAQ</NavLink>
+      </li>
+      <li>
+        <NavLink to="/testimonials">Testimonial</NavLink>
+      </li>
+    </ul>
+  </div>
+</div>
+
 
         {/* Right Section: Contact Information */}
         <div className="footer-right">

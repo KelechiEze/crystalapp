@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./accountDetails.css";
@@ -9,6 +9,7 @@ const AccountDetailsPage = () => {
   const [passwordVisible, setPasswordVisible] = useState(false); // Manage password visibility
   const [dob, setDob] = useState(null); // Manage Date of Birth state
   const [gender, setGender] = useState(""); // Manage Gender selection state
+  const navigate = useNavigate(); // Hook for navigation
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -16,6 +17,10 @@ const AccountDetailsPage = () => {
 
   const handleGenderSelection = (selectedGender) => {
     setGender(selectedGender); // Update gender state with the selected value
+  };
+
+  const handleNextStep = () => {
+    navigate("/paymentDetails"); // Navigate to /paymentDetails
   };
 
   return (
@@ -192,7 +197,7 @@ const AccountDetailsPage = () => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="next-button">
+        <button type="button" className="next-button" onClick={handleNextStep}>
           Next step →
         </button>
       </div>

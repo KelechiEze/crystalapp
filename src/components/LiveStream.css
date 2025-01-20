@@ -70,7 +70,7 @@
     margin-top: 5px;
   }
 
-  .modal {
+  .modal1 {
     position: fixed; /* Use fixed to center modal relative to the viewport */
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@
     z-index: 1000;
   }
   
-  .modal-content {
+  .modal-content1 {
     position: relative;
     background-color: #333;
     padding: 60px;

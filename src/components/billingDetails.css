@@ -4,6 +4,7 @@
     height: 110vh;
     font-family: "Arial", sans-serif;
     color: #333;
+    background-color: #EDEFF3;
   }
   
   /* Left Section */
@@ -54,4 +55,197 @@
     margin-top: 20px;
   }
   
+  /* Billing Details Right Section */
+.billingDetails-right {
+    padding: 2rem 4.5rem;
+    max-width: 900px;
+    width: 700px;
+    margin: 2rem auto;
+  }
+  
+  .billingDetails-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .billingDetails-subtitle {
+    font-size: 14px;
+    margin-bottom: 29px;
+    color: #666;
+  }
+  
+  .billingDetails-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Space between fields */
+    width: 100%;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group input::placeholder {
+    font-size: 13px;
+  }
+  
+  .input-select {
+    height: 40px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center; /* Vertically center-align the checkbox and label */
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .checkbox-label input {
+    margin-right: 8px; /* Space between the checkbox and label */
+  }
+  
+  
+  .btn-complete {
+    grid-column: span 2; /* Button spans across both columns */
+    padding: 12px 20px;
+    width: 20%;
+    font-size: 14px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .btn-complete:hover {
+    background-color: #0056d4;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  /* Spinner Styles */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal Styles */
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .modal-icon {
+    margin-bottom: 20px;
+  }
+  
+  .checkmark-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 45px;
+    border: solid #4caf50;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 22px;
+    left: 28px;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .modal-message {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .modal-button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background-color: #0056b3;
+  }
   

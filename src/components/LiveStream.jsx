@@ -74,8 +74,8 @@ const LiveStream = () => {
 
       {/* Modal */}
       {selectedVideo && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal1" onClick={closeModal}>
+          <div className="modal-content1" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={closeModal}>
               &times;
             </button>

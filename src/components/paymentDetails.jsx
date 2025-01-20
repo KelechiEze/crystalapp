@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./paymentDetails.css";
 import Logo from "../assets/LOGO.png";
 
@@ -7,6 +7,7 @@ const PaymentDetails = () => {
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
+  const navigate = useNavigate(); // Hook to handle navigation
 
   // Format card number: Add space every 4 digits
   const handleCardNumberChange = (e) => {
@@ -27,6 +28,12 @@ const PaymentDetails = () => {
   const handleCvvChange = (e) => {
     const input = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
     setCvv(input.slice(0, 3)); // Limit to 3 digits
+  };
+
+  // Handle form submission
+  const handleNextStep = (e) => {
+    e.preventDefault(); // Prevent form from refreshing the page
+    navigate("/billingDetails"); // Navigate to /billingDetails
   };
 
   return (
@@ -89,7 +96,7 @@ const PaymentDetails = () => {
         <p className="paymentDetails-subtitle">
           Enter payment information to go to the next step. Don’t worry, it’s optional & skippable!
         </p>
-        <form className="paymentDetails-form">
+        <form className="paymentDetails-form" onSubmit={handleNextStep}>
           {/* Card Number */}
           <div className="form-group">
             <label htmlFor="cardNumber">Card Number</label>
@@ -145,7 +152,11 @@ const PaymentDetails = () => {
             <button type="submit" className="btn-next">
               Next Step
             </button>
-            <button type="button" className="btn-skip">
+            <button
+              type="button"
+              className="btn-skip"
+              onClick={() => navigate("/billingDetails")}
+            >
               Skip Payment
             </button>
           </div>

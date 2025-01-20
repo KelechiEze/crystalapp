@@ -32,7 +32,7 @@ nav {
 nav a {
   text-decoration: none;
   color: #333; /* Default color */
-  font-weight:  500;
+  font-weight: 500;
   transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and scale transition */
 }
 
@@ -48,29 +48,75 @@ nav a:hover {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+  font-size: 15px;
 }
 
+/* Login button */
 .login-btn {
   background-color: transparent;
   color: #333;
   border: 1px solid #333;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.login-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  background-color: #007bff; /* Blue shade on hover */
+}
+
+/* Register button with pulse effect */
 .register-btn {
   background-color: #27ae60;
   color: #fff;
   border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-animation: pulse 1.5s infinite ease-in-out; /* Webkit animation */
+  animation: pulse 1.5s infinite ease-in-out; /* Standard animation */
+  transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
-.login-btn:hover,
 .register-btn:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  background-color: #2ecc71; /* Green shade on hover for both buttons */
+  background-color: #1e8449; /* Slightly darker green on hover */
 }
+
+/* Pulse animation (Webkit prefixed) */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1); /* Initial size */
+  }
+  50% {
+    -webkit-transform: scale(1.1); /* Grow slightly */
+  }
+  100% {
+    -webkit-transform: scale(1); /* Return to normal size */
+  }
+}
+
+/* Pulse animation (Standard) */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Initial size */
+  }
+  50% {
+    transform: scale(1.1); /* Grow slightly */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

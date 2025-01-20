@@ -1,0 +1,233 @@
+/* General Layout */
+.login-page {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Left Section */
+  .login-left {
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+      url('../assets/hit.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .login-logo {
+    width: 120px;
+  }
+  
+  .login-left-content {
+    text-align: left;
+    padding: 50px;
+  }
+  
+  .quote {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 23px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .quote.fade-in {
+    opacity: 1;
+  }
+  
+  .quote.fade-out {
+    opacity: 0;
+  }
+  
+  .author {
+    font-weight: bold;
+  }
+  
+  .designation {
+    font-size: 14px;
+    color: #cccccc;
+  }
+  
+  /* Right Section */
+  .login-right {
+    flex: 1;
+    background-color: #f9faff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form-container {
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .login-title {
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  .login-description {
+    color: #7f8c8d;
+    font-weight: light;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 6px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #34495e;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+
+  .login-form input::placeholder {
+    font-size: 13px;
+  }
+  
+  .login-button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+  .forgot-password {
+    float: right;
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+    margin-top: -30px;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+
+  .login-options {
+    margin-bottom: 30px;
+  }
+  
+  /* Checkbox Styling */
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+  }
+  
+  .remember-me input[type="checkbox"] {
+    /* Custom appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transform: scale(0.6);
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .remember-me input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="%23fff" d="M6.173 10.323L3.708 7.83a.478.478 0 0 0-.707 0 .522.522 0 0 0 0 .725l2.826 2.892a.478.478 0 0 0 .707 0l5.75-5.89a.522.522 0 0 0 0-.726.478.478 0 0 0-.707 0L6.173 10.323z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+  }
+  
+  .remember-me input[type="checkbox"]:hover {
+    border-color: #007bff;
+  }
+  
+  .remember-me label {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #7f8c8d;
+    cursor: pointer;
+  }
+
+  .signup-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Spinner Styling */
+  .spinner {
+    border: 3px solid #f3f3f3; /* Light gray */
+    border-top: 3px solid #007bff; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

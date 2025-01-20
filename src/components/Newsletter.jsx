@@ -34,8 +34,8 @@ const Newsletter = () => {
       {/* Modal */}
       {isModalVisible && (
         <div className="modal-overlay">
-          <div className="modal1">
-            <div className="modal-content1">
+          <div className="modal2">
+            <div className="modal-content2">
               <div className="modal-icon">
                 ✔ {/* You can replace this with an SVG or image of a tick */}
               </div>
