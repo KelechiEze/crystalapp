@@ -98,6 +98,7 @@ const BillingDetailsPage = () => {
               <option value="US">United States</option>
               <option value="CA">Canada</option>
               <option value="UK">United Kingdom</option>
+              <option value="UK">Nigeria</option>
               {/* Add more countries as needed */}
             </select>
           </div>
