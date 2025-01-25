@@ -72,10 +72,9 @@ const LoginPage = () => {
                 Forget Password?
               </NavLink>
             </div>
-
-            <button type="submit" className="login-button">
-              LOGIN
-            </button>
+            <NavLink to="/" className="login-button">
+                LOGIN
+              </NavLink>
           </form>
           <p className="signup-link">
             Don’t have an account?{" "}

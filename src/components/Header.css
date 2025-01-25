@@ -64,8 +64,9 @@ nav a:hover {
   background-color: #007bff; /* Blue shade on hover */
 }
 
-/* Register button with pulse effect */
+/* Register button */
 .register-btn {
+  position: relative; /* Enable pseudo-elements positioning */
   background-color: #27ae60;
   color: #fff;
   border: none;
@@ -73,8 +74,8 @@ nav a:hover {
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
-  -webkit-animation: pulse 1.5s infinite ease-in-out; /* Webkit animation */
-  animation: pulse 1.5s infinite ease-in-out; /* Standard animation */
+  overflow: hidden; /* Clip the waves inside the button container */
+  z-index: 1; /* Ensure it's above the wave animations */
   transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
@@ -82,31 +83,63 @@ nav a:hover {
   background-color: #1e8449; /* Slightly darker green on hover */
 }
 
-/* Pulse animation (Webkit prefixed) */
-@-webkit-keyframes pulse {
+/* Register button */
+.register-btn {
+  position: relative; /* Enable pseudo-elements positioning */
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  overflow: hidden; /* Clip the waves inside the button container */
+  z-index: 1; /* Ensure it's above the wave animations */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.register-btn:hover {
+  background-color: #1e8449; /* Slightly darker green on hover */
+}
+
+/* Add square wave effect */
+.register-btn::before,
+.register-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 123, 255, 0.3); /* Blue semi-transparent square */
+  border-radius: 45%; /* Rounded edges for the square */
+  z-index: -1; /* Place behind the button */
+  transform: translate(-50%, -50%);
+  animation: squareWave 6s infinite ease-out; /* Slower animation */
+}
+
+.register-btn::after {
+  animation-delay: 3s; /* Staggered waves */
+}
+
+/* Keyframes for square wave animation */
+@keyframes squareWave {
   0% {
-    -webkit-transform: scale(1); /* Initial size */
+    width: 0;
+    height: 0;
+    opacity: 1;
   }
   50% {
-    -webkit-transform: scale(1.1); /* Grow slightly */
+    background: rgba(255, 87, 51, 0.3); /* Transition to a red shade */
   }
   100% {
-    -webkit-transform: scale(1); /* Return to normal size */
+    width: 350px; /* Expand the square wave size */
+    height: 350px;
+    opacity: 0; /* Fade out as it expands */
+    background: rgba(46, 204, 113, 0.3); /* End with a green shade */
   }
 }
 
-/* Pulse animation (Standard) */
-@keyframes pulse {
-  0% {
-    transform: scale(1); /* Initial size */
-  }
-  50% {
-    transform: scale(1.1); /* Grow slightly */
-  }
-  100% {
-    transform: scale(1); /* Return to normal size */
-  }
-}
 
 
 /* Fade-in animation */

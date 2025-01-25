@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import HeaderImage from '../assets/LOGO.png';
 
 const Header = () => {
+  const [isPulsing, setIsPulsing] = useState(true);
+
+  useEffect(() => {
+    // Reset animation after a certain duration to avoid sticking issues
+    const pulseInterval = setInterval(() => {
+      setIsPulsing(false); // Remove the animation
+      setTimeout(() => setIsPulsing(true), 50); // Reapply animation after a short delay
+    }, 3000); // Adjust interval as needed (e.g., every 3 seconds)
+
+    return () => clearInterval(pulseInterval); // Cleanup interval on component unmount
+  }, []);
+
   return (
     <header className="header">
       <div className="logo">
@@ -30,7 +42,10 @@ const Header = () => {
         <NavLink to="/login" className="login-btn">
           Login
         </NavLink>
-        <NavLink to="/register" className="register-btn">
+        <NavLink
+          to="/register"
+          className={`register-btn ${isPulsing ? 'pulse' : ''}`} // Add pulse class dynamically
+        >
           Register
         </NavLink>
       </div>
